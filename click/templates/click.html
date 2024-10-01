@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Challenge</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Click Challenge</h1>
+        <div id="counter" class="alert alert-info">Clicks: 0</div>
+        <button id="clickButton" class="btn btn-primary btn-lg mb-3">
+            Click me!
+        </button>
+        <div id="flag" class="alert alert-success"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        let count = parseInt(urlParams.get('count')) || 0;
+        
+        const counterElement = document.getElementById('counter');
+        const flagElement = document.getElementById('flag');
+        const button = document.getElementById('clickButton');
+
+        async function checkFlag() {
+            try {
+                const response = await fetch(`/check_flag?count=${count}`);
+                const data = await response.json();
+                if (data.success) {
+                    flagElement.style.display = 'block';
+                    flagElement.textContent = data.flag;
+                    button.disabled = true;
+                    button.classList.remove('btn-primary');
+                    button.classList.add('btn-secondary');
+                }
+            } catch (error) {
+                console.error('Error checking flag:', error);
+            }
+        }
+
+        function updateCounter() {
+            counterElement.textContent = `Clicks: ${count}`;
+            checkFlag();
+
+            // Update URL parameter
+            const newUrl = `${window.location.pathname}?count=${count}`;
+            history.pushState({}, '', newUrl);
+        }
+
+        button.addEventListener('click', () => {
+            count++;
+            updateCounter();
+        });
+
+        // Initial update
+        updateCounter();
+    </script>
+</body>
+</html>
