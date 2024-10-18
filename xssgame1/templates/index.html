@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS Game</title>
+    <!-- CSSのリンク -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>XSS Game</h1>
+    <form action="/" method="POST">
+        <input type="text" name="input" placeholder="Try XSS attack">
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if result %}
+    <div class="result">
+        {{ result|safe }}
+    </div>
+    {% endif %}
+</body>
+</html>

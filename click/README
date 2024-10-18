@@ -1,0 +1,7 @@
+実行手順
+1. DockerImageをビルドする
+`docker build -t flask-app .`
+2. コンテナを起動する
+`docker run -p 5000:5000 flask-app`
+3. 立ち上がったサイトにアクセスする
+`http://<IPアドレス>/:5000`

@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
-FLAG = "FLAG{you_reached_1000_clicks}"
+FLAG = "kitsec{you_reached_1000_clicks}"
 
 @app.route('/')
 def index():
