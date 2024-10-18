@@ -1,0 +1,23 @@
+# Docker Hubの公式Pythonイメージを使用
+FROM python:3.9-slim
+
+# コンテナ内の作業ディレクトリを設定
+WORKDIR /app
+
+# 現在のディレクトリの内容をコンテナにコピー
+COPY . /app
+
+# 必要なパッケージ(Flask)をインストール
+RUN pip install --no-cache-dir flask
+
+# Flaskアプリケーションのエントリーポイントを指定
+ENV FLASK_APP=app.py
+
+# Flaskをデバッグモードで動作させるための環境変数を設定
+ENV FLASK_ENV=development
+
+# Flaskアプリを外部からアクセスできるようにポート5000を公開
+EXPOSE 5000
+
+# Flaskアプリを起動するコマンド
+CMD ["flask", "run", "--host=0.0.0.0"]
