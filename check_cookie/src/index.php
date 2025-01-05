@@ -19,10 +19,10 @@
 			<input type="text" name="username" required>
 			<br>
 			<label for="password">Password:</label>
-			<input type="password" name="password" required>
+			<input type="text" name="password" required>
 			<br>
 			<input type="submit" value="Login" class="submit-btn">
-		</from>
+		</form>
 		<br>
 	</body>
 

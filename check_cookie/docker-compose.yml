@@ -5,7 +5,7 @@ services:
   nginx:
     image: nginx:1.25.0
     ports:
-      - 8000:80
+      - 50030:80
     volumes:
       # srcフォルダ内をコンテナ内の/var/www/htmlにマウント
       - ./src:/var/www/html
