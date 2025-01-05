@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  flask-app:
+    build: ./app
+    ports:
+      - "50040:5000"
+    volumes:
+      - ./app:/app
+    networks:
+      - ctf-network
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    depends_on:
+      - flask-app
+    networks:
+      - ctf-network
+
+networks:
+  ctf-network:

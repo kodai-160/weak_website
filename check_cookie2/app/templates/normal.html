@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Normal User Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #5a5a8f;
+        }
+        form {
+            margin-top: 20px;
+        }
+        input, button {
+            padding: 10px 15px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #5a5a8f;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #47478b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Normal User Page</h1>
+    <p>このページにはVIP専用コンテンツはありません。</p>
+    <p>VIP専用コンテンツを閲覧する場合はログインして下さい</p>
+    <form action="/login" method="POST">
+        <label>ユーザー名: </label>
+        <input type="text" name="username" placeholder="例: admin">
+        <button type="submit">ログイン</button>
+    </form>
+</body>
+</html>
