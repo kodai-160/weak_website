@@ -9,6 +9,8 @@ services:
       - db
     networks:
       - app-network
+    ports:
+      - 50010:80
 
   db:
     image: mysql:8.0

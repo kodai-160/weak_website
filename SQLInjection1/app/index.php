@@ -118,26 +118,14 @@
             display: none;
         }
     </style>
-    <script>
-        function toggleDebug() {
-            const debugDiv = document.getElementById("debug-info");
-            if (debugDiv.style.display === "none") {
-                debugDiv.style.display = "block";
-            } else {
-                debugDiv.style.display = "none";
-            }
-        }
-    </script>
 </head>
-
 <body>
     <h1>セキプロ図書館</h1>
     <p>
-        SQL Injectionを仕掛けることによってFlagを見つけて下さい。<br>
-        Flagの形式はkitsec{}となっています。<br>
-        後ろで動いているSQL文を見るボタンを押すと、どのようなSQL文が実行されているのかが表示されます。<br>
-        SQL Injectionがうまく刺さらない場合、困ったときはこの情報を利用して下さい。<br>
-        答えが分かったら、運営メンバーまで教えて下さい。喜びます。
+        セキプロ図書館へようこそ！<br>
+        ユーザ名とパスワードを入力してログインすることで<br>
+        借りている本の名前を参照することができます<br>
+        試しにユーザ名を<strong>Bob</strong>, パスワードを<strong>ZmlnaHQ</strong>にしてログインしてみよう
     </p>
 
     <form method="POST">
@@ -147,8 +135,6 @@
         <input type="text" name="password" required>
         <input type="submit" value="Login">
     </form>
-
-    <button onclick="toggleDebug()">後ろで動いているSQL文を見る</button>
 
     <?php
     $mysqli = new mysqli("db", "kitsec", "kitsec", "sql_injection1");
@@ -164,12 +150,12 @@
         $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
 
         // デバッグ情報の表示
-        echo "<div id='debug-info' class='debug-info'>";
-        echo "<strong>Debug Information:</strong><br>";
-        echo "Submitted Username: " . htmlspecialchars($username) . "<br>";
-        echo "Submitted Password: " . htmlspecialchars($password) . "<br>";
-        echo "Generated SQL Query: " . htmlspecialchars($sql) . "<br>";
-        echo "</div>";
+        // echo "<div id='debug-info' class='debug-info'>";
+        // echo "<strong>Debug Information:</strong><br>";
+        // echo "Submitted Username: " . htmlspecialchars($username) . "<br>";
+        // echo "Submitted Password: " . htmlspecialchars($password) . "<br>";
+        // echo "Generated SQL Query: " . htmlspecialchars($sql) . "<br>";
+        // echo "</div>";
 
         $result = $mysqli->query($sql);
 
