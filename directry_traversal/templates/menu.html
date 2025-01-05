@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>メニュー | sekipro cafe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body id="top">
+        <header class="header">
+            <nav class="nav">
+                <ul>
+                    <li><a href="#">ホーム</a></li>
+                    <li><a href="#">お知らせ</a></li>
+                    <li><a href="#">店舗情報</a></li>
+                    <li><a href="#">アクセス</a></li>
+                    <li><a href="#">メニュー</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </header>
+    <h1 class="hero menu">sekipro cafeメニュー</h1>
+    <main>
+        <div class="items">
+            <div class="item">
+                <a href="{{ url_for('view_item', item_id='item1') }}">
+                    <img src="{{ url_for('static', filename='images/item1.jpg') }}" alt="オリジナルカプチーノ">
+                </a>
+                <p>
+                    オリジナルカプチーノ<br>
+                    <strong>￥600-</strong>
+                </p>
+            </div>
+            <div class="item">
+                <a href="{{ url_for('view_item', item_id='item2') }}">
+                    <img src="{{ url_for('static', filename='images/item2.jpg') }}" alt="スペシャルNZブレンド">
+                </a>
+                <p>
+                    スペシャルNZブレンド<br>
+                    <strong>¥400-</strong>
+                </p>
+            </div>
+            <div class="item">
+                <a href="{{ url_for('view_item', item_id='item3') }}">
+                    <img src="{{ url_for('static', filename='images/item3.jpg') }}" alt="クリーミーアイスブレンド">
+                </a>
+                <p>
+                    クリーミーアイスブレンド<br>
+                    <strong>￥400-</strong>
+                </p>
+            </div>
+            <div class="item">
+                <a href="{{ url_for('view_item', item_id='item4') }}">
+                    <img src="{{ url_for('static', filename='images/item4.jpg') }}" alt="ふわふわペアドーナツ">
+                </a>
+                <p>
+                    ふわふわペアドーナツ<br>
+                    <strong>￥450-</strong>
+                </p>
+            </div>
+            <div class="item">
+                <a href="{{ url_for('view_item', item_id='item5') }}">
+                    <img src="{{ url_for('static', filename='images/item5.jpg') }}" alt="無農薬栽培ブルベリーのレアチーズ">
+                </a>
+                <p>
+                    無農薬栽培ブルベリーのレアチーズ<br>
+                    <strong>￥650-</strong>
+                </p>
+            </div>
+            <div class="item">
+                <a href="{{ url_for('view_item', item_id='item6') }}">
+                    <img src="{{ url_for('static', filename='images/item6.jpg') }}" alt="季節のクロワッサンフルーツサンド">
+                </a>
+                <p>
+                    季節のクロワッサンフルーツサンド<br>
+                    <strong>￥600-</strong>
+                </p>
+            </div>
+            <div class="item">
+                <a href="{{ url_for('view_item', item_id='item7') }}">
+                    <img src="{{ url_for('static', filename='images/item7.jpg') }}" alt="果樹園の採れたてパンケーキ">
+                </a>
+                <p>
+                    果樹園の採れたてパンケーキ<br>
+                    <strong>￥1210-</strong>
+                </p>
+            </div>
+            <div class="item">
+                <a href="{{ url_for('view_item', item_id='item8') }}">
+                    <img src="{{ url_for('static', filename='images/item8.jpg') }}" alt="自家製マロンクリームのシュー">
+                </a>
+                <p>
+                    自家製マロンクリームのシュー<br>
+                    <strong>￥600-</strong>
+                </p>
+            </div>
+            <div class="item">
+                <a href="{{ url_for('view_item', item_id='item9') }}"></a>
+                <img src="{{ url_for('static', filename='images/item9.jpg') }}" alt="ムース・ノッチオーラ">
+                <p>
+                    ムース・ノッチオーラ<br>
+                    <strong>￥600-</strong>
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="copyright">&copy; sekipro cafe</p>
+    </footer>
+</body>
+</html>

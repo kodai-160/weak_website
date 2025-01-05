@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} | sekipro cafe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <ul>
+                <li><a href="/">ホーム</a></li>
+                <li><a href="/menu">メニュー</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>{{ title }}</h1>
+        <p>{{ description }}</p>
+    </main>
+    <footer>
+        <p>&copy; KUZIRA CAFE</p>
+    </footer>
+</body>
+</html>
