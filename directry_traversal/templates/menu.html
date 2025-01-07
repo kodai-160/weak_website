@@ -22,7 +22,7 @@
     <main>
         <div class="items">
             <div class="item">
-                <a href="{{ url_for('view_item', item_id='item1') }}">
+                <a href="{{ url_for('file') }}?file_name=item1.txt">
                     <img src="{{ url_for('static', filename='images/item1.jpg') }}" alt="オリジナルカプチーノ">
                 </a>
                 <p>
@@ -31,7 +31,7 @@
                 </p>
             </div>
             <div class="item">
-                <a href="{{ url_for('view_item', item_id='item2') }}">
+                <a href="{{ url_for('file') }}?file_name=item2.txt">
                     <img src="{{ url_for('static', filename='images/item2.jpg') }}" alt="スペシャルNZブレンド">
                 </a>
                 <p>
@@ -40,7 +40,7 @@
                 </p>
             </div>
             <div class="item">
-                <a href="{{ url_for('view_item', item_id='item3') }}">
+                <a href="{{ url_for('file') }}?file_name=item3.txt">
                     <img src="{{ url_for('static', filename='images/item3.jpg') }}" alt="クリーミーアイスブレンド">
                 </a>
                 <p>
@@ -49,7 +49,7 @@
                 </p>
             </div>
             <div class="item">
-                <a href="{{ url_for('view_item', item_id='item4') }}">
+                <a href="{{ url_for('file') }}?file_name=item4.txt">
                     <img src="{{ url_for('static', filename='images/item4.jpg') }}" alt="ふわふわペアドーナツ">
                 </a>
                 <p>
@@ -58,7 +58,7 @@
                 </p>
             </div>
             <div class="item">
-                <a href="{{ url_for('view_item', item_id='item5') }}">
+                <a href="{{ url_for('file') }}?file_name=item5.txt">
                     <img src="{{ url_for('static', filename='images/item5.jpg') }}" alt="無農薬栽培ブルベリーのレアチーズ">
                 </a>
                 <p>
@@ -67,7 +67,7 @@
                 </p>
             </div>
             <div class="item">
-                <a href="{{ url_for('view_item', item_id='item6') }}">
+                <a href="{{ url_for('file') }}?file_name=item6.txt">
                     <img src="{{ url_for('static', filename='images/item6.jpg') }}" alt="季節のクロワッサンフルーツサンド">
                 </a>
                 <p>
@@ -76,7 +76,7 @@
                 </p>
             </div>
             <div class="item">
-                <a href="{{ url_for('view_item', item_id='item7') }}">
+                <a href="{{ url_for('file') }}?file_name=item7.txt">
                     <img src="{{ url_for('static', filename='images/item7.jpg') }}" alt="果樹園の採れたてパンケーキ">
                 </a>
                 <p>
@@ -85,7 +85,7 @@
                 </p>
             </div>
             <div class="item">
-                <a href="{{ url_for('view_item', item_id='item8') }}">
+                <a href="{{ url_for('file') }}?file_name=item8.txt">
                     <img src="{{ url_for('static', filename='images/item8.jpg') }}" alt="自家製マロンクリームのシュー">
                 </a>
                 <p>
@@ -94,8 +94,9 @@
                 </p>
             </div>
             <div class="item">
-                <a href="{{ url_for('view_item', item_id='item9') }}"></a>
-                <img src="{{ url_for('static', filename='images/item9.jpg') }}" alt="ムース・ノッチオーラ">
+                <a href="{{ url_for('file') }}?file_name=item9.txt">
+                    <img src="{{ url_for('static', filename='images/item9.jpg') }}" alt="ムース・ノッチオーラ">
+                </a>
                 <p>
                     ムース・ノッチオーラ<br>
                     <strong>￥600-</strong>

@@ -7,9 +7,10 @@
 - OSコマンドインジェクション
 
 ### 学内CTFで使う問題
-- SQL Injection1
-- check_cookie1
-- check_cookie2
+- SQL Injection1(単純なSQL Injection)
+- check_cookie1 (is_Adminをいじる)
+- check_cookie2 (cookieのデコード)
+- directry_traversal
 
 # 参考にしたいもの
 - ctfの問題
