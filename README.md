@@ -11,6 +11,7 @@
 - check_cookie1 (is_Adminをいじる)
 - check_cookie2 (cookieのデコード)
 - directry_traversal
+- browsing
 
 # 参考にしたいもの
 - ctfの問題
