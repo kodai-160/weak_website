@@ -37,11 +37,18 @@ def login():
     if username == "admin":
         role = "normal"
         
+    # JSONデータをbase64エンコードする
     cookie_data = {
-        "username":username,
-        "role":role
+        "username": username,
+        "role": role
     }
-    encoded_cookie = base64.b64encode(json.dumps(cookie_data).encode()).decode()
+    json_data = json.dumps(cookie_data).encode()
+
+    # 長さを調整して必ず「==」が付くようにする
+    padding_length = (4 - len(json_data) % 3) % 3
+    json_data += b" " * padding_length  # パディングの追加
+
+    encoded_cookie = base64.b64encode(json_data).decode()
     
     response = make_response(redirect('/vip'))
     response.set_cookie('session', encoded_cookie, httponly=True)
