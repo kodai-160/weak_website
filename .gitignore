@@ -9,3 +9,5 @@ cookie1/package.json
 jwt/node_modules
 jwt/package-lock.json
 jwt/package.json
+
+SQLInjection2/app/__pycache__

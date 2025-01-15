@@ -1,11 +1,12 @@
 version: '3.8'
-
 services:
-  flask-app:
+  web:
     build: .
     ports:
-      - "5000:5000"
+      - "50100:5000"
     volumes:
-      - ./app:/app
+      - .:/app
     environment:
-      FLASK_ENV: development
+      - FLASK_APP=app:create_app
+      - FLASK_ENV=development
+    command: flask run --host=0.0.0.0 
